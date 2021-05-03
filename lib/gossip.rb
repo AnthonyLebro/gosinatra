@@ -19,7 +19,7 @@ end
 
 def self.find(id)
   gossip = []
-  CSV.read("./db/gossip.csv").each_with_index do |csv_line,index|
+  CSV.read("./db/gossip.csv").each_with_index  do |csv_line,index|
     if id == index+1
       gossip << Gossip.new(csv_line[0], csv_line[1])
       break

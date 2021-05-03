@@ -9,4 +9,3 @@ gem 'dotenv'
 gem 'sinatra'
 gem 'csv'
 gem 'shotgun'
-
