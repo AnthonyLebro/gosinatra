@@ -1,0 +1,23 @@
+
+<html>
+  
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  
+  <body>
+    <h1>Mon super site de gossip !</h1>
+
+    <% gossips.each_with_index do |gossip, index| %>
+      <p>
+        <strong>Voici le gossip n°<%= index+1 %></strong><br/>
+        Son auteur : <%= gossip.author.capitalize %><br/>
+        Le contenu du potin : <%= gossip.content.capitalize %><br/>
+        Pour afficher la fiche du gossip clique <a href='http://localhost:4567/gossips/<%= index+1 %>'>ici !</a>
+      </p>
+      <hr>
+    <% end %>
+
+  </body>
+  
+</html>

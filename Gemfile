@@ -7,5 +7,6 @@ gem 'rubocop'
 gem 'rspec'
 gem 'dotenv'
 gem 'sinatra'
-gem 'shotgun'
 gem 'csv'
+gem 'shotgun'
+
