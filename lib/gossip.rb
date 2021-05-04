@@ -28,4 +28,20 @@ def self.find(id)
   return gossip
 end
 
+def self.update(id,author,content)
+  gossips=[]
+  CSV.read('./db/gossip.csv').each_with_index do |csv_line, index|
+    if id.to_i == index + 1
+      gossips << [author,content]
+    else
+      gossips << [csv_line[0],csv_line[1]]
+    end
+  end
+
+  CSV.open('./db/gossip.csv', 'w') do |csv|
+    gossips.each {|gossip| csv << gossip}  
+    end
+  end
+
 end
+

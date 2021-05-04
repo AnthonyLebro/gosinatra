@@ -1,0 +1,27 @@
+<html>
+  
+  <head>
+
+    <title>The TH Potins</title>
+    
+  </head>
+  
+  <body>
+    <h1>Mon super site de gossip !</h1>
+      <p>
+        <strong>Modifier<%= index+1 %></strong><br/>
+
+            <form action='/gossips/edit/' method='POST'>
+      Modifier ton nom:  <input type='text' name='gossip_author_new'/><br/>
+      Modifier ton potin : <input type='text' name='gossip_content_new'/><br/>
+      <input type='submit'/>
+
+        Pour afficher la fiche du gossip clique <a href='http://localhost:4567/gossips_new/<%= index+1 %>'>ici !</a>
+      </p>
+      <hr>
+    <% end %>
+
+  </body>
+  
+</html>
+
